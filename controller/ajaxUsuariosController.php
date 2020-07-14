@@ -38,7 +38,11 @@ $administrador->setId($_POST['id']);
 $administrador->setNombre($_POST['nombre']);
 $administrador->setApellido($_POST['apellido']);
 $administrador->setEmail($_POST['email']);
+                if($administradorDAO->buscarAdministrador($_POST['id'])->getContrasena() != ($_POST['contrasena'])){
 $administrador->setContrasena(md5($_POST['contrasena']));
+                }else{
+$administrador->setContrasena($administradorDAO->buscarAdministrador($_POST['id'])->getContrasena());         
+                }
 $administrador->setAccType($_POST['AccType']);
 $administrador->setEdad($_POST['edad']);
 $administrador->setDomicilio($_POST['domicilio']);
@@ -57,7 +61,11 @@ $tecnico->setId($_POST['id']);
 $tecnico->setNombre($_POST['nombre']);
 $tecnico->setApellido($_POST['apellido']);
 $tecnico->setEmail($_POST['email']);
+                if($tecnicoDAO->buscarTecnico($_POST['id'])->getContrasena() != ($_POST['contrasena'])){
 $tecnico->setContrasena(md5($_POST['contrasena']));
+                }else{
+$tecnico->setContrasena($tecnicoDAO->buscarTecnico($_POST['id'])->getContrasena());         
+                }
 $tecnico->setAccType($_POST['AccType']);
 $tecnico->setEdad($_POST['edad']);
 $tecnico->setDomicilio($_POST['domicilio']);

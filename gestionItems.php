@@ -146,6 +146,15 @@ document.getElementById("formError").innerHTML = "Debes completar todos los camp
 		});
 		});
 		</script>
+		<script>
+			function validatePrecio(precio){
+		    if(isNaN($('#precio').val())){
+            document.getElementById("formError").innerHTML = "Los parámetros ingresados como precio no son validos";
+			}else{
+			document.getElementById("formError").innerHTML = "";
+			}
+}
+		</script>
 	</head>
 	<body>
 		<div>
@@ -222,7 +231,7 @@ echo "</div>";
 										<br>
 																				<input type="text" name="serie" id="serie" class="form-control" placeholder="Ingrese número de serie" />
 										<br>
-																				<input type="text" name="precio" id="precio" class="form-control" placeholder="Ingrese precio" />
+																				<input type="text" name="precio" id="precio" class="form-control" placeholder="Ingrese precio" oninput="validatePrecio(this);"/>
 										<br>
 																				<input type="text" name="fabricante" id="fabricante" class="form-control" placeholder="Ingrese fabricante" />
 										<br>

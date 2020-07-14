@@ -150,7 +150,7 @@ var uniqid = randLetter + Date.now();
 		$('#insert_form').on("submit", function(event){
 		event.preventDefault();
 
-		if(($('#id').val() == "") || ($('#nombre').val() == "") || ($('#apellido').val() == "") || ($('#email').val() == "") || ($('#contrasena').val() == "") || ($('#edad').val() == "") || ($('#domicilio').val() == "") || isNaN($('#edad').val()) || validateEmail($('#email').val() == false))  {
+		if(($('#id').val() == "") || ($('#nombre').val() == "") || ($('#apellido').val() == "") || ($('#email').val() == "") || ($('#contrasena').val() == "") || ($('#edad').val() == "") || ($('#domicilio').val() == "") || isNaN($('#edad').val()) )  {
 			
             document.getElementById("formError3").innerHTML = "Debes completar todos los campos correctamente";
 			
