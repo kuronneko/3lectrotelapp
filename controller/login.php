@@ -1,4 +1,4 @@
-<?php
+<?php session_start();
 
 include("/xampp/htdocs/electrotel/model/utils/config.php");
 require config::$conexion_url;
@@ -8,7 +8,7 @@ require config::$administrador_url;
 require config::$tecnico_url;
 require config::$extraDAO;
 
-session_start();
+
 
 
 /** Sirve para destruir la sesión asociada al usuario de la sesión

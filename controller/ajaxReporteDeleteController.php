@@ -1,4 +1,4 @@
-<?php
+<?php session_start();
 //insert.php
 include("/xampp/htdocs/electrotel/model/utils/config.php");
 require config::$conexion_url;
@@ -26,7 +26,6 @@ require config::$incluye_url;
  *  El controlador se inicializa a través de un script de jquery utilizando las librerias de ajax
  */
 
-session_start();
 $adminSesion = new administradorDAO();
     $reporteDAO = new reporteDAO();
     $incluyeDAO = new incluyeDAO();

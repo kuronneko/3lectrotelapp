@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<?php
+<?php session_start();
 include("/xampp/htdocs/electrotel/model/utils/config.php");
 require config::$conexion_url;
 require config::$labor_url;
@@ -8,7 +7,7 @@ require config::$administrador_url;
 require config::$administradorDAO_url;
 require config::$tecnicoDAO_url;
 require config::$tecnico_url;
-                  session_start();
+                  
                   $adminSesion = new administradorDAO();
                
                   if(empty($adminSesion->buscarAdministrador($_SESSION[config::$session])->getId())){
@@ -18,6 +17,7 @@ require config::$tecnico_url;
                   }
 
 ?>
+<!DOCTYPE html>
 <html>
 	<head>
 		<title>ELECTROTEL</title>

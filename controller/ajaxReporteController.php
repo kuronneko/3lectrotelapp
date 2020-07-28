@@ -1,4 +1,4 @@
-<?php
+<?php session_start();
 //insert.php
 include("/xampp/htdocs/electrotel/model/utils/config.php");
 require config::$conexion_url;
@@ -41,10 +41,9 @@ $laborDAO = new laborDAO();
 $localizacionDAO = new localizacionDAO();
 $incluyeDAO = new incluyeDAO();
 
-session_start();
 
 if(!empty($_POST["reporteId"])){
-
+$_SESSION["formItemList"] = unserialize(serialize($_SESSION["formItemList"]));
 $reporte->setId($_POST["reporteId"]);
 $labor = $laborDAO->buscarLabor($_POST["laborId"]);
 $localizacion = $localizacionDAO->buscarLocalizacion($_POST["localizacionId"]);

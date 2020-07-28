@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<?php
+<?php session_start();
 include("/xampp/htdocs/electrotel/model/utils/config.php");
 require config::$conexion_url;
 require config::$itemDAO_url;
@@ -14,7 +13,7 @@ require config::$categoria_url;
 require config::$tecnico_url;
 require config::$localizacion_url;
 require config::$labor_url;
-session_start();
+
 $tecnicoDAO = new tecnicoDAO();
 
 if(empty($tecnicoDAO->buscarTecnico($_SESSION[config::$session])->getId())){
@@ -23,6 +22,7 @@ header('location: '.config::$index.'');
 
 }
 ?>
+<!DOCTYPE html>
 <html>
 	<head>
 		<title>ELECTROTEL</title>
@@ -250,6 +250,7 @@ var output = d.getFullYear() + '/' +
 										
 										<hr>
 										<?php
+										$_SESSION["formItemList"] = unserialize(serialize($_SESSION["formItemList"]));
 										if(!empty($_SESSION['formItemList'])){
 										foreach ($_SESSION['formItemList'] as $items)
 										{
