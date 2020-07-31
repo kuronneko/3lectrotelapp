@@ -1,4 +1,4 @@
-<?php
+<?php session_start();
 include("/xampp/htdocs/electrotel/model/utils/config.php");
 
 require config::$conexion_url;
@@ -60,7 +60,6 @@ require config::$tecnicoDAO_url;
                     ?>
 
                     <?php
-                  session_start();
                   $administradorDAO = new administradorDAO();
                   $tecnicoDAO = new tecnicoDAO();
                   if(empty($_SESSION[config::$session])){
