@@ -1,5 +1,5 @@
 # 3lectrotel App
-Web App that allows generating/viewing statistical graphics of the information obtained through report forms. OO, MVC, DAO, DTO PHP73(RAW)+JQUERY/AJAX+BOOTSTRAP4+HIGHCHARTS.
+Web App that allows you to generate statistical graphs of the information obtained through report forms. OO, MVC, DAO, DTO PHP73(RAW)+JQUERY/AJAX+BOOTSTRAP4+HIGHCHARTS.
 
 ### Preview
 <p> <img src="https://github.com/kuronneko/kuronneko.github.io/blob/master/assets/img/portfolio3lectrotel.png" width="450"> </p>
