@@ -22,7 +22,7 @@ Required:
      
 `4.` Set Database connection params at /model/utils/conexion.php
      
-`4.` Login as super admin
+`5.` Login as super admin
 
      User: master
      Password: master
